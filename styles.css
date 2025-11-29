@@ -1,0 +1,153 @@
+/* Color principal de la marca (Fucsia / Magenta) */
+:root {
+    --color-primario: #C4236F; /* Fucsia / Magenta*/
+    --fondo-dorado: #DE9920; /* Dorado/Mostaza */
+    --color-acento: #f4f4f4;
+}
+
+/* Estilos Generales y Tipografía */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo-dorado);
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primario);
+}
+
+.contenedor-principal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* WARMI PERÚ (GRANDE) */
+.encabezado {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    /* GRANDE: Más espacio vertical */
+    padding: 80px 20px; 
+    /*border-bottom: 5px solid var(--color-a;*/ /*LINEA ABAJO DE WARMI PERÚ*/
+}
+
+.logo {
+    /* TAMAÑO DEL TITULO */
+    font-size: 6rem; /*Tamaño de la letra*/
+    margin: 0;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+/* estilo del titulo arriba de las etiquetas */
+.seccion-catalogo h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.rejilla-productos {
+    display: grid;
+    /* AJUSTE (3 EN PANTALLAS GRANDES) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 10px; /*Espacio entre casilla de venta*/
+}
+
+/* RECUADRO INFORMACIÓN DEL PRODUCTO */
+.tarjeta-producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px; /* MODIFICA LAS ESQUINAS DEL CUADRO */
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1); /*Sombra del cuadro*/
+    text-align: center;
+    transition: transform 0.3s; /*Velocidad del efecto de movimiento*/
+}
+
+/*Movimiento al colocar el mouse encima*/
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    color: var(--color-primario); /*?*/
+}
+
+.precio {
+    font-size: 1.5rem;
+    color: #cc0000; 
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.colores {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; 
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Pie de Página */
+.pie-pagina {
+    background-color: #0C4F58;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 200px; /*Aquí defino a que altura quiero que quede el final*/
+}
+
+.pie-pagina a {
+    color: var(--color-acento);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.pie-pagina a:hover {
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES (RESPONSIVE) */
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 50px 10px;
+    }
+    .logo {
+        font-size: 3rem; 
+        letter-spacing: 4px;
+    }
+}

@@ -1,38 +1,53 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-<base target="------">
-<title>Warmi Perú</title>
-    <style>
-        #menu div.barra{
-            text-align: center;
-            letter-spacing: 8px;
-            background-color: #0c4f58; 
-        }
-        #menu div.barra a.boton{
-            background-color: #0c4f58;
-            color: white
-            padding 4px 6px 2px 9px;    
-            text-decoration: none;
-            letter-spacing: 8px;
-        }
-        #menu div.barra a.boton:hover{
-            background-color: #eb11c6; 
-        }
-        #menu div.barra a boton:active{
-            background-color: white; 
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARMI PERÚ | Catálogo Oficial de Fajas</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
-<body bgcolor="eb11c6">
-<H1 align="center">WARMI PERÚ</H1>
-<div id="menu">
-<div class="barra">
-<a class="boton">HOLA</a>
-<a class="boton" href="baskett3.jpg">HOLA</a>
-<a class="boton" href="Natacion1.jpg">CHAU</a>
-<a class="boton" href="voley1.jpg">CA</a>
-<a class="boton" href="remo1.jpg">RE</a>
-</div>
-</div>
+<body>
+
+    <header class="encabezado">
+        <h1 class="logo">WARMI PERÚ</h1>
+    </header>
+
+    <main class="contenedor-principal">
+        
+        <section class="seccion-catalogo">
+            <h2>Nuestra Colección</h2>
+            
+            <div class="rejilla-productos">
+                
+                <article class="tarjeta-producto">
+                    <img src="faja-postparto.jpg" alt="Faja Postparto de Alta Compresión">
+                    <h3>Faja Postparto Clásica</h3>
+                    <p class="colores">Colores: <span style="color: black;">⚫</span> <span style="color: beige;">⚪</span></p>
+                    <p class="precio">S/ 150.00</p>
+                    <a href="URL_WHATSAPP_AQUI" target="_blank" class="btn-whatsapp">¡Pedir por WhatsApp!</a>
+                </article>
+
+                <article class="tarjeta-producto">
+                    <img src="faja-moldeadora.jpg" alt="Faja Moldeadora de Cintura y Glúteos">
+                    <h3>Faja Moldeadora Invisible</h3>
+                    <p class="colores">Colores: <span style="color: black;">⚫</span> <span style="color: brown;">🟤</span></p>
+                    <p class="precio">S/ 180.00</p>
+                    <a href="URL_WHATSAPP_AQUI" target="_blank" class="btn-whatsapp">¡Pedir por WhatsApp!</a>
+                </article>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Contáctanos en nuestras redes sociales para realizar tu pedido y consultar tallas:</p>
+        <div class="redes">
+            <a href="https://www.facebook.com/people/Warmi-Per%C3%BA/61584307027553/">Facebook</a> | <a href="URL_INSTAGRAM">Instagram</a>
+        </div>
+        <p>&copy; 2025 WARMI PERÚ. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
