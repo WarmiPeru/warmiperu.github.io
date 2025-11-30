@@ -35,10 +35,30 @@ h3 {
 .encabezado {
     background-color: var(--color-primario);
     color: white;
-    text-align: center;
-    /* GRANDE: Más espacio vertical */
-    padding: 80px 20px; 
-    /*border-bottom: 5px solid var(--color-a;*/ /*LINEA ABAJO DE WARMI PERÚ*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el logo y el texto */
+}
+
+.logo-imagen {
+    max-width: 80px; /* Hacemos la imagen más pequeña para que quepa junto al texto */
+    height: auto;
+}
+
+/* Estilo para el texto "WARMI PERÚ" */
+.logo-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem; /* tamaño */
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    display: block; 
 }
 
 .logo {
@@ -149,5 +169,29 @@ h3 {
     .logo {
         font-size: 3rem; 
         letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 850px) {
+    /* En pantallas medianas, reducimos el texto para que quepa */
+    .logo-texto {
+        font-size: 3rem; 
+        letter-spacing: 4px;
+    }
+    .logo-imagen {
+        max-width: 80px; 
+    }
+}
+@media (max-width: 500px) {
+    /* En móviles muy pequeños, hacemos el texto y la imagen más chicos */
+    .logo-contenedor {
+        gap: 10px;
+    }
+    .logo-texto {
+        font-size: 2rem; 
+        letter-spacing: 2px;
+    }
+    .logo-imagen {
+        max-width: 60px;
     }
 }
