@@ -45,20 +45,23 @@ h3 {
     display: flex;
     align-items: center;
     gap: 15px; /* Espacio entre el logo y el texto */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .logo-imagen {
-    max-width: 80px; /* Hacemos la imagen más pequeña para que quepa junto al texto */
+    max-width: 100px; /* Hacemos la imagen más pequeña para que quepa junto al texto */
     height: auto;
 }
 
 /* Estilo para el texto "WARMI PERÚ" */
 .logo-texto {
     font-family: 'Montserrat', sans-serif;
-    font-size: 5rem; /* tamaño */
+    font-size: 3.5rem; /* tamaño */
     letter-spacing: 8px;
     text-transform: uppercase;
     display: block; 
+    white-space: nowrap; /*Fuerza al texto a aparecer en una linea*/
 }
 
 .logo {
@@ -162,36 +165,31 @@ h3 {
 }
 
 /* MEDIA QUERIES (RESPONSIVE) */
-@media (max-width: 600px) {
-    .encabezado {
-        padding: 50px 10px;
-    }
-    .logo {
-        font-size: 3rem; 
+/*Pantallas medianas*/
+@media (max-width: 850px) {
+    .logo-texto {
+        /*Reducimos el texto*/
+        font-size: 2.5rem;
         letter-spacing: 4px;
+    }
+    .logo-imagen {
+        max-width: 80px;
     }
 }
 
-@media (max-width: 850px) {
-    /* En pantallas medianas, reducimos el texto para que quepa */
-    .logo-texto {
-        font-size: 3rem; 
-        letter-spacing: 4px;
-    }
-    .logo-imagen {
-        max-width: 80px; 
-    }
-}
 @media (max-width: 500px) {
     /* En móviles muy pequeños, hacemos el texto y la imagen más chicos */
+    .encabezado{
+        padding: 40px 10px;
+    }
     .logo-contenedor {
-        gap: 10px;
+        gap: 8px;
     }
     .logo-texto {
-        font-size: 2rem; 
+        font-size: 1.5rem; 
         letter-spacing: 2px;
     }
     .logo-imagen {
-        max-width: 60px;
+        max-width: 40px;
     }
 }
